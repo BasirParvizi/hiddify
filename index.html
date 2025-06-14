@@ -280,5 +280,24 @@
             }
         });
     </script>
+  <script>
+    const style = document.createElement('style');
+    style.innerHTML = `
+      *:focus {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      ::selection {
+        background: transparent !important;
+        color: inherit !important;
+      }
+
+      * {
+        -webkit-tap-highlight-color: transparent !important;
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
