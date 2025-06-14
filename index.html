@@ -206,7 +206,7 @@
     <div class="container">
         <div class="logo-container">
             <img 
-                src="" 
+                src="image.jpg" 
                 alt="Hiddify Logo" 
                 class="logo" 
                 id="hiddify-logo"
@@ -216,15 +216,15 @@
         </div>
         
         <div class="download-buttons">
-            <a href="#" class="glass-btn" id="app-store">
+            <a href="https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532" class="glass-btn" id="app-store">
                 <i class="fab fa-apple"></i>
                 App Store
             </a>
-            <a href="#" class="glass-btn" id="google-play">
+            <a href="https://play.google.com/store/apps/details?id=app.hiddify.com" class="glass-btn" id="google-play">
                 <i class="fab fa-google-play"></i>
                 Google Play
             </a>
-            <a href="#" class="glass-btn" id="download-apk">
+            <a href="https://github.com/hiddify/hiddify-next/releases/download/v2.5.7/Hiddify-Android-universal.apk" class="glass-btn" id="download-apk">
                 <i class="fas fa-download"></i>
                 Download APK
             </a>
@@ -249,19 +249,14 @@
     <div class="toast" id="toast">Config copied to clipboard!</div>
     
     <script>
-        // You can set the image source dynamically
         document.addEventListener('DOMContentLoaded', function() {
-            // Set your image URL here
-            const logo = document.getElementById('hiddify-logo');
-            logo.src = 'https://github.com/BasirParvizi/hiddify/blob/main/image.jpg'; // Replace with your image URL
-            
             // Config text to copy
-            const configText = "https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality#Aleph%20%E2%9D%A4%F0%9F%A4%8D%F0%9F%92%9A%20FREE2CONFIG";
+            const configText = "Your configuration text here";
             
             // Copy Config button functionality
             document.getElementById('copy-config').addEventListener('click', function() {
                 navigator.clipboard.writeText(configText).then(function() {
-                    showToast('Config copied to clipboard!');
+                    showToast('copied');
                 }).catch(function(err) {
                     showToast('Failed to copy config');
                     console.error('Could not copy text: ', err);
@@ -272,11 +267,6 @@
             document.getElementById('scan-qr').addEventListener('click', function() {
                 window.location.href = "https://github.com/BasirParvizi/hiddify/blob/main/QR.jpg"; // Replace with your QR link
             });
-            
-            // Set your download links
-            document.getElementById('app-store').href = "https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532"; // Add App Store link
-            document.getElementById('google-play').href = "https://play.google.com/store/apps/details?id=app.hiddify.com"; // Add Google Play link
-            document.getElementById('download-apk').href = "https://github.com/hiddify/hiddify-next/releases/download/v2.5.7/Hiddify-Android-universal.apk"; // Add APK download link
             
             // Toast notification function
             function showToast(message) {
